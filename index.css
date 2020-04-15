@@ -1,5 +1,48 @@
-.body
-{
-  margin: 0;
+body {
+  background: #A9A9A9;
+  font-family: Ariel;
+}
+
+.interface {
+  width: 100%;
+  height: auto;
+  border: solid 1px green;
+}
+
+.instructions {
   display: flex;
+  width: 750px;
+  height: auto;
+  margin: 15px auto;
+  border: solid 1px red;
+  flex-wrap: wrap;
+}
+
+#welcome {
+  height: auto;
+  flex: 1 1 100%;
+  border: solid 1px #ffffff;
+  margin: 5px auto;
+  text-align: center;
+}
+
+.obj {
+  height: auto;
+  flex: 1 1 100%;
+  border: solid 1px #ffffff;
+  margin: 5px auto;
+  text-align: center;
+}
+
+.movement {
+  height: auto;
+  flex: 1 1 100%;
+  border: solid 1px #ffffff;
+  margin: 5px auto;
+  text-align: center;
+}
+
+#welcome, #obj-title, #HtP-title {
+  text-decoration: underline;
+  font-variant: small-caps;
 }

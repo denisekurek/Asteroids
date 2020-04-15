@@ -3,94 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="./index.css">
   </head>
-  <style>
-	body
-	{
-		background: #A9A9A9;
-		font-family: Ariel;
-	}
-	
-	.interface
-	{
-		width: 1800px;
-		height: 950px;
-		border: solid 1px green;
-		margin: auto;
-	}
-	
-	.instructions
-	{
-		display: block;
-		width: 750px;
-		height: auto;
-		margin: 15px auto 15px auto;
-		border: solid 1px red;
-	}
-	
-	#welcome
-	{
-		height: auto;
-		width: 300px;
-		border: solid 1px #ffffff;
-		margin: 15px auto;
-		display: block;
-	}
-	
-	h2, p
-	{
-		height: auto;
-		margin: 5px auto;
-		border: solid 1px green;
-		display: block;
-	}
-	
-	#Obj-title
-	{
-		width: 100px;
-	}
-	
-	#HtP-title
-	{
-		width: 125px
-	}
-	
-	#obj-notes
-	{
-		width: 550px;
-	}
-	
-	#move-notes
-	{
-		width: 220px;
-	}
-	
-	.game-wrap
-	{
-		border: solid 1px #ffffff;
-		width: 900px;
-		height: 600px;
-		background-color: #000000;
-		margin: 15px auto 0 auto;
-	}
-	
-  </style>
   <body>
-    <div class="interface">
-		<div class="instructions">
-				<span>
-					<h1 id="welcome"><em>Welcome to Asteroids</em></h1>
-					<h2 id="Obj-title">Objective</h2>
-					<p id="obj-notes"><em>YOUR MISSION</em>: To make it trough an endless onslaught of asteroids with the most points possible. </br>
-					<em>WARNING</em>: You may incounter unknown lifeforms on your journey, they may be hostile.</p>
-					<h2 id="HtP-title">How to play</h2>
-					<p id="move-notes">Up Arrow to move ship forward</br>Left Arrow rotates ship left</br>Right Arrow rotates ship right</br>Space Bar fires weapon</p>
-				</span>
+    <div class="wrap">
+		  <div class="instructions">
+				<h1 id="welcome"><em>Welcome to Asteroids</em></h1>
+        <div class="obj">
+          <h2 id="obj-title">Objective</h2>
+  				<p><em>YOUR MISSION</em>: To make it trough an endless onslaught of asteroids with the most points possible. </br>
+          <em>WARNING</em>: You may incounter unknown lifeforms on your journey, they may be hostile.</p>
+        </div>
+        <div class="movement">
+          <h2 id="HtP-title">How to play</h2>
+          <p>Up Arrow to move ship forward</br>Left Arrow rotates ship left</br>Right Arrow rotates ship right</br>Space Bar fires weapon</p>
+        </div>
 			</div>
 			<div class="game-wrap">
-			
+
 			</div>
 		</div>
-	</div>
   </body>
 </html>
