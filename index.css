@@ -1,48 +1,51 @@
 body {
   background: #A9A9A9;
-  font-family: Ariel;
+  font-family: Arial;
 }
 
-.interface {
+header {
   width: 100%;
-  height: auto;
-  border: solid 1px green;
 }
 
-.instructions {
+.head-wrap {
+  max-width: 1280px;
+  height: 50px;
+  margin: 10px auto;
+  border: solid 1px blue;
   display: flex;
-  width: 750px;
-  height: auto;
-  margin: 15px auto;
-  border: solid 1px red;
-  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 #welcome {
-  height: auto;
-  flex: 1 1 100%;
-  border: solid 1px #ffffff;
-  margin: 5px auto;
-  text-align: center;
+  border: solid 1px black;
+  height: 50px;
+  width: auto;
+  margin: 0;
+  font-size: 30px;
 }
 
-.obj {
-  height: auto;
-  flex: 1 1 100%;
-  border: solid 1px #ffffff;
-  margin: 5px auto;
-  text-align: center;
+nav {
+  border: solid 1px red;
+  width: 200px;
+  display: flex;
+  align-items: center;
 }
 
-.movement {
-  height: auto;
-  flex: 1 1 100%;
-  border: solid 1px #ffffff;
-  margin: 5px auto;
-  text-align: center;
+.nav-list {
+  list-style: none;
+  display: flex;
+  padding-inline-start: 0px;
+  justify-content: space-around;
+  border: solid 1px blue;
+  flex: 1 1;
 }
 
-#welcome, #obj-title, #HtP-title {
-  text-decoration: underline;
-  font-variant: small-caps;
+.nav-list li {
+  flex: 1 1;
+  border: solid 1px green;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
 }
