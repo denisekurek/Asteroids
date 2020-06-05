@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="./index.css">
+    <link src="./index.js">
   </head>
   <body>
     <header>
       <div class="head-wrap">
         <div id="welcome">
-          Auto Pong (The Game)
+          Pong (The Game)
         </div>
         <nav>
           <ul class="nav-list">
@@ -26,10 +27,13 @@
 		<div class="game-wrap">
       <canvas id="game"></canvas>
       <!-- <div id="divider"></div> -->
+      <div class="score" id="left-score"></div>
+      <div class="score" id="right-score"></div>
 		</div>
     <div class="game-control-wrap">
       <ul class="game-inputs">
-        <li class="game-button">Start Game</li>
+        <li class="game-button">Start 1 Player Game</li>
+        <li class="game-button">Start Auto Pong Game</li>
         <li class="game-button">Pause Game</li>
         <li class="game-button">End Game</li>
       </ul>

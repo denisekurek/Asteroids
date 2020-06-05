@@ -43,11 +43,15 @@ nav {
   flex: 1 1;
   border: solid 1px green;
   text-align: center;
+  display: flex;
 }
 
 a {
   text-decoration: none;
   color: #000000;
+  height: 100%;
+  width: 100%;
+  flex: 1 1;
 }
 
 .game-wrap {
@@ -75,6 +79,25 @@ a {
   top: 5%;
 }
 
+.score {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 5%;
+  color: white;
+  font-size: 90px;
+  line-height: 100px;
+  text-align: center;
+}
+
+#left-score {
+  left: 35%;
+}
+
+#right-score {
+  right: 35%;
+}
+
 .game-control-wrap {
   max-width: 1280px;
   border: solid 1px blue;
@@ -97,10 +120,11 @@ a {
 
 .game-button {
   height: inherit;
-  width: 200px;
+  flex: 1 1 200px;
   height: 50px;
   border: solid 1px green;
   background-color: lightgray;
   text-align: center;
   line-height: 50px;
+  margin: 0 20px;
 }
