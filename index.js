@@ -12,9 +12,12 @@ let inGame = false;
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 ctx.fillStyle = "#ffffff";
-ctx.fillRect(canvas.width *.05, canvas.height * .425, 15, 100);
-ctx.fillRect(canvas.width *.93, canvas.height * .425, 15, 100);
-ctx.fillRect(750, 0, 5, canvas.height);
+//Creates left paddle
+let paddleLeft = ctx.fillRect(canvas.width *.05, canvas.height * .425, 20, 150);
+//Create right paddle
+let paddleRight = ctx.fillRect(canvas.width */*.93*/.1, canvas.height * .425, 20, 150);
+//Create center line
+const centerLine = ctx.fillRect(canvas.width * .5, 0, 5, canvas.height);
 
 
 function startGame1P() {
