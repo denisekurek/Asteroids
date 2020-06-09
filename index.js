@@ -12,8 +12,8 @@ let inGame = false;
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 ctx.fillStyle = "#ffffff";
-ctx.fillRect(canvas.width *.05, canvas.height * .425, 25, 100);
-ctx.fillRect(canvas.width *.93, canvas.height * .425, 25, 100);
+ctx.fillRect(canvas.width *.05, canvas.height * .425, 15, 100);
+ctx.fillRect(canvas.width *.93, canvas.height * .425, 15, 100);
 ctx.fillRect(750, 0, 5, canvas.height);
 
 
