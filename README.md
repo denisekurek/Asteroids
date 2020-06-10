@@ -1,4 +1,8 @@
 # Pong
  Automatic Pong Game
 
-Being interested in game development, I want to practice both my JavaScript and game development. An Pong game should work to give me practice with both as well as multiple computations and movement. I plan on using and HTML base with CSS to set up the game on a browser and using a canvas for the game.  
+Based off one of the most classic games in history, I want to recreate Pong. In this version, there will be a way to select if your game will be a single player game or if you want a fully automatic version of the game. After completion, I plan on finding a way to make the automatic version of the game an full screen / multi monitor screen 
+
+I have always been interested in video games and as I grow as a developer, I want to do and create more through my own coding skills. I have played some of the older classic games as well as the modern day games and want to be able to combine the two into a game that I can be proud to say that I made from scratch.
+
+Any feedback or thoughts are always welcome and would love to connect and work with other like minded individuals.
