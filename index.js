@@ -11,17 +11,21 @@ let rightScore = 0;
 let inGame = false;
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-ctx.fillStyle = "#ffffff";
-//Creates left paddle
-let paddleLeft = ctx.fillRect(canvas.width *.05, (canvas.height * .5) - 75/*canvas.height * .425*/, 20, 150);
-//Create right paddle
-let paddleRight = ctx.fillRect(canvas.width - (canvas.width * .05) - 20, (canvas.height * .5) - 75, 20, 150);
-//Create center line
-let centerLine = ctx.fillRect(canvas.width * .5 - 2.5, 0, 5, canvas.height);
-//Draw ball on centerline
-ctx.beginPath();
-const ball = ctx.arc(canvas.width * .5, canvas.height * .5, 20, 0, 2 * Math.PI);
-ctx.fill();
+
+function drawBaseGame() {
+  //Creates the base game on the canvas
+  ctx.fillStyle = "#ffffff";
+  //Creates left paddle
+  let paddleLeft = ctx.fillRect(canvas.width *.05, (canvas.height * .5) - 75, 20, 150);
+  //Create right paddle
+  let paddleRight = ctx.fillRect(canvas.width - (canvas.width * .05) - 20, (canvas.height * .5) - 75, 20, 150);
+  //Create center line
+  let centerLine = ctx.fillRect(canvas.width * .5 - 2.5, 0, 5, canvas.height);
+  //Draw ball on centerline
+  ctx.beginPath();
+  const ball = ctx.arc(canvas.width * .5, canvas.height * .5, 20, 0, 2 * Math.PI);
+  ctx.fill();
+}
 
 function startGame1P() {
   console.log('Start a 1 Player game');
@@ -61,3 +65,5 @@ document.addEventListener('keydown', (e) => {
     console.log(e);
   }
 })
+
+drawBaseGame();
