@@ -59,11 +59,16 @@ p1Button.addEventListener('click', startGame1P);
 autoButton.addEventListener('click', startAutoGame);
 pauseButton.addEventListener('click', pauseGame);
 endButton.addEventListener('click', endGame);
+
 document.addEventListener('keydown', (e) => {
-  if (inGame)
+  if (inGame && e.keyCode == 38)
   {
-    console.log(e);
+    console.log('going up');
   }
-})
+  else if (inGame == true && e.keyCode == 40)
+  {
+    console.log('going down');
+  }
+});
 
 drawBaseGame();
