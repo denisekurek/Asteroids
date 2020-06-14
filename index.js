@@ -23,12 +23,13 @@ function drawBaseGame() {
   let centerLine = ctx.fillRect(canvas.width * .5 - 2.5, 0, 5, canvas.height);
   //Draw ball on centerline
   ctx.beginPath();
-  const ball = ctx.arc(canvas.width * .5, canvas.height * .5, 20, 0, 2 * Math.PI);
+  const ball = ctx.arc(canvas.width * .5, canvas.height * .5, canvas.height * .02, 0, 2 * Math.PI);
   ctx.fill();
 }
 
 function startGame1P() {
   console.log('Start a 1 Player game');
+  drawBaseGame();
   inGame = true;
   scoreLeft.textContent = leftScore;
   scoreRight.textContent = rightScore;
@@ -37,6 +38,7 @@ function startGame1P() {
 function startAutoGame() {
   console.log('Start a Auto Pong Game');
   inGame = true;
+  drawBaseGame();
   scoreLeft.textContent = leftScore;
   scoreRight.textContent = rightScore;
 };
@@ -70,5 +72,3 @@ document.addEventListener('keydown', (e) => {
     console.log('going down');
   }
 });
-
-drawBaseGame();
