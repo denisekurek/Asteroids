@@ -12,23 +12,10 @@ let inGame = false;
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-function drawBaseGame() {
-  //Creates the base game on the canvas
-  ctx.fillStyle = "#ffffff";
-  //Creates left paddle
-  let paddleLeft = ctx.fillRect(canvas.width *.05, (canvas.height * .5) - 75, 20, 150);
-  //Create right paddle
-  let paddleRight = ctx.fillRect(canvas.width - (canvas.width * .05) - 20, (canvas.height * .5) - 75, 20, 150);
-  //Create center line
-  let centerLine = ctx.fillRect(canvas.width * .5 - 2.5, 0, 5, canvas.height);
-  //Draw ball on centerline
-  ctx.beginPath();
-  const ball = ctx.arc(canvas.width * .5, canvas.height * .5, canvas.height * .02, 0, 2 * Math.PI);
-  ctx.fill();
-}
+scoreLeft.textContent = 'Select Game Mode';
 
 function startGame1P() {
-  console.log('Start a 1 Player game');
+  // console.log('Start a 1 Player game');
   drawBaseGame();
   inGame = true;
   scoreLeft.textContent = leftScore;
@@ -36,7 +23,7 @@ function startGame1P() {
 };
 
 function startAutoGame() {
-  console.log('Start a Auto Pong Game');
+  // console.log('Start a Auto Pong Game');
   inGame = true;
   drawBaseGame();
   scoreLeft.textContent = leftScore;
@@ -44,14 +31,14 @@ function startAutoGame() {
 };
 
 function pauseGame() {
-  console.log('Pausing Game');
+  // console.log('Pausing Game');
   inGame = true;
   scoreLeft.textContent = leftScore;
   scoreRight.textContent = rightScore;
 };
 
 function endGame() {
-  console.log('Ending Game');
+  // console.log('Ending Game');
   inGame = false;
   scoreLeft.textContent = '';
   scoreRight.textContent = '';
@@ -72,3 +59,18 @@ document.addEventListener('keydown', (e) => {
     console.log('going down');
   }
 });
+
+function drawBaseGame() {
+  //Creates the base game on the canvas
+  ctx.fillStyle = "#ffffff";
+  //Creates left paddle
+  let paddleLeft = ctx.fillRect(canvas.width *.05, (canvas.height * .5) - 75, 20, 150);
+  //Create right paddle
+  let paddleRight = ctx.fillRect(canvas.width - (canvas.width * .05) - 20, (canvas.height * .5) - 75, 20, 150);
+  //Create center line
+  let centerLine = ctx.fillRect(canvas.width * .5 - 2.5, 0, 5, canvas.height);
+  //Draw ball on centerline
+  ctx.beginPath();
+  const ball = ctx.arc(canvas.width * .5, canvas.height * .5, canvas.height * .02, 0, 2 * Math.PI);
+  ctx.fill();
+}
