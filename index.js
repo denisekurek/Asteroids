@@ -52,8 +52,22 @@ function startAutoGame() {
 function endGame() {
   // console.log('Ending Game');
   inGame = false;
-  scoreLeft.textContent = '';
-  scoreRight.textContent = '';
+  ctx.clearRect(0,0, canvas.width, canvas.height);
+  if (leftScore > rightScore)
+  {
+    scoreLeft.textContent = 'Player 1 Wins';
+    scoreRight.textContent = '';
+  }
+  else if (rightScore > leftScore)
+  {
+    scoreLeft.textContent = 'Computer Wins';
+    scoreRight.textContent = '';
+  }
+  else {
+    scoreLeft.textContent = 'Draw';
+    scoreRight.textContent = '';
+  }
+
 };
 
 function movepaddle(e) {
