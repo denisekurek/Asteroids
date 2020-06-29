@@ -54,6 +54,14 @@ a {
   flex: 1 1;
 }
 
+.Instructions {
+  /* border: solid 1px blue; */
+  max-width: 1280px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 28px;
+}
+
 .game-wrap {
   max-width: 1080px;
   margin: 8px auto;
@@ -78,6 +86,16 @@ a {
   font-size: 90px;
   line-height: 100px;
   text-align: center;
+}
+
+#announce {
+  width: 500px;
+  height: 100px;
+  text-align: center;
+  word-wrap: normal;
+  /* border: solid 2px blue; */
+  left: calc(50% - 250px);
+  top: 15%;
 }
 
 #left-score {
