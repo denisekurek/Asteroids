@@ -16,24 +16,23 @@ canvas.height = window.innerHeight;
 let playerPaddleY = 0;
 
 function startGame1P() {
-  // console.log('Start a 1 Player game');
-  // drawLeftPaddle();
-  // drawRightPaddle();
+  if (!inGame) {
   drawBaseGame();
-  // drawBall();
   inGame = true;
   announcement.textContent = '';
   scoreLeft.textContent = leftScore;
   scoreRight.textContent = rightScore;
+  };
 };
 
 function startAutoGame() {
-  // console.log('Start a Auto Pong Game');
-  inGame = true;
+  if (!inGame) {
   drawBaseGame();
+  inGame = true;
   announcement.textContent = '';
   scoreLeft.textContent = leftScore;
   scoreRight.textContent = rightScore;
+  };
 };
 
 // function pauseGame() {
@@ -52,27 +51,27 @@ function startAutoGame() {
 // };
 
 function endGame() {
-  // console.log('Ending Game');
-  inGame = false;
-  ctx.clearRect(0,0, canvas.width, canvas.height);
-  if (leftScore > rightScore)
-  {
-    announcement.textContent = 'Player 1 Wins!'
-    scoreLeft.textContent = '';
-    scoreRight.textContent = '';
+  if (inGame) {
+    inGame = false;
+    ctx.clearRect(0,0, canvas.width, canvas.height);
+    if (leftScore > rightScore)
+    {
+      announcement.textContent = 'Player 1 Wins!'
+      scoreLeft.textContent = '';
+      scoreRight.textContent = '';
+    }
+    else if (rightScore > leftScore)
+    {
+      announcement.textContent = 'Computer Wins!';
+      scoreLeft.textContent = '';
+      scoreRight.textContent = '';
+    }
+    else {
+      announcement.textContent = 'Draw';
+      scoreLeft.textContent = '';
+      scoreRight.textContent = '';
+    }
   }
-  else if (rightScore > leftScore)
-  {
-    announcement.textContent = 'Computer Wins!';
-    scoreLeft.textContent = '';
-    scoreRight.textContent = '';
-  }
-  else {
-    announcement.textContent = 'Draw';
-    scoreLeft.textContent = '';
-    scoreRight.textContent = '';
-  }
-
 };
 
 function movepaddle(e) {
@@ -86,10 +85,6 @@ function movepaddle(e) {
     playerPaddleY += 10;
     e.preventDefault();
   }
-
-  // drawBall();
-  // drawLeftPaddle();
-  // drawRightPaddle();
   drawBaseGame();
 }
 
